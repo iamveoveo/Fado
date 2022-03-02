@@ -1,8 +1,3 @@
-<?php
-echo "<pre>";
-echo print_r($manufacture);
-echo "</pre>";
-?>
     <!-- department -->
     <section class="home-feature-department">
         <div class="container">
@@ -17,8 +12,8 @@ echo "</pre>";
                     <!-- pagination -->
                     <nav aria-label="Page navigation example">
                         <ul class="pagination">
-                            <li class="page-item disabled">
-                                <a  href="#" aria-label="Previous"class="page-link">
+                            <li class="page-item disabled ">
+                                <a  href="#" aria-label="Previous"class="page-link slick-prev slick-arrow">
                                     <i class="fas fa-angle-left"></i>                            
                                 </a>
                             </li>
@@ -33,100 +28,26 @@ echo "</pre>";
 
                 <!-- block-body -->
                 <div class="swiper-container">
-                        <div class="major-carousel js-carousel owl-carousel">
+                        <div class="">
                           
-                            <div class="row g-3 "> 
-                                    <div class="col-md-2 brand-reputation">
+                            <div class=" autoplay slick"> 
+                                <?php foreach ($manufacture as $row):?>
+                                    <div class="col-md-2 mx-1 brand-reputation">
                                         <div class="cate-item">
-                                            <a href="" class="cate-item-img">
+                                            <a href="<?php echo SITEURL . '?controller=product&action=list&id="' . $row['ManuID'] . '"';?>" class="cate-item-img">
                                                 <span class="cate-img-inner">
-                                                    <img class="cate-img" src="assets/img/orient.png" alt="">
+                                                    <img class="cate-img" src="assets/img/upload/<?php echo $row['ManuLogo'];?>" alt="<?php echo $row['ManuLogo'];?>">
                                                 </span>
                                             </a>
                                             <div class="cate-item-body">
-                                                <a href="" class="cate-item-title">Đồng hồ Orient</a>                                  
+                                                <a href="" class="cate-item-title"><?php echo $row['ManuName'];?></a>                                  
                                                 <div class="cate-item-des">
-                                                    <font style="vertical-align: inherit;">Giảm giá 32%</font>
+                                                    <font style="vertical-align: inherit;"><?php echo $row['ManuCountry'];?></font>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-2 brand-reputation">
-                                        <div class="cate-item">
-                                            <a href="" class="cate-item-img">
-                                                <span class="cate-img-inner">
-                                                    <img class="cate-img" src="assets/img/bosch.png" alt="">
-                                                </span>
-                                            </a>
-                                            <div class="cate-item-body">
-                                                <a href="" class="cate-item-title">Gia dụng gia đình</a>
-                                                <div class="cate-item-des">
-                                                    <font style="vertical-align: inherit;">Giảm giá 50%</font>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 brand-reputation">
-                                        <div class="cate-item">
-                                            <a href="" class="cate-item-img">
-                                                <span class="cate-img-inner">
-                                                    <img class="cate-img" src="assets/img/casio.png" alt="">
-                                                </span>
-                                            </a>
-                                            <div class="cate-item-body">
-                                                <a href="" class="cate-item-title">Đồng hồ Casio</a>
-                                                <div class="cate-item-des">
-                                                    <font style="vertical-align: inherit;">Giảm giá 38%</font>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 brand-reputation">
-                                        <div class="cate-item">
-                                            <a href="" class="cate-item-img">
-                                                <span class="cate-img-inner">
-                                                    <img class="cate-img" src="assets/img/moriitalia.png" alt="">
-                                                </span>
-                                            </a>
-                                            <div class="cate-item-body">
-                                                <a href="" class="cate-item-title">Nhà bếp hiện đại</a>
-                                                <div class="cate-item-des">
-                                                    <font style="vertical-align: inherit;">Giảm giá 65%</font>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 brand-reputation">
-                                        <div class="cate-item">
-                                            <a href="" class="cate-item-img">
-                                                <span class="cate-img-inner">
-                                                    <img class="cate-img" src="assets/img/elmich.png" alt="">
-                                                </span>
-                                            </a>
-                                            <div class="cate-item-body">
-                                                <a href="" class="cate-item-title">Gian bếp Âu</a>
-                                                <div class="cate-item-des">
-                                                    <font style="vertical-align: inherit;">Giảm giá 80%</font>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 brand-reputation">
-                                        <div class="cate-item">
-                                            <a href="" class="cate-item-img">
-                                                <span class="cate-img-inner">
-                                                    <img class="cate-img" src="assets/img/homedics.png" alt="">
-                                                </span>
-                                            </a>
-                                            <div class="cate-item-body">
-                                                <a href="" class="cate-item-title">Chăm sóc sức khỏe</a>
-                                                <div class="cate-item-des">
-                                                    <font style="vertical-align: inherit;">Giảm giá 35%</font>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                <?php endforeach;?>
                             </div>
 
                         </div>
@@ -134,3 +55,4 @@ echo "</pre>";
             </div>
         </div>
     </section>
+

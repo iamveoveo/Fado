@@ -1,8 +1,8 @@
 <?php
+const SITEURL = 'http://localhost:8000/Fado/';
 
 class database {
 
-    const SITEURL = 'http://localhost:8000/Fado';
     const DB_HOST = 'localhost';
     const DB_USERNAME = 'root';
     const DB_PASSWORD = '';

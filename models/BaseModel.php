@@ -32,10 +32,16 @@ class BaseModel extends Database{
         return $data;
     }
 
-    public function find($table, $id){
-        $sql = "select * from ${table} where ${id}";
+    public function find($table, $data){
+        $modify_data = [];
+
+        foreach ($data as $key => $val){
+            array_push($modify_data, "${key} = '" . $val . "'");
+        }
+
+        $sql = "select * from ${table} where " . implode(" and ", $modify_data);
         $res = $this->_query($sql);
-        return mysqli_fetch_assoc($res);
+        return $this->fetchAll($res);
     }
 
     public function insert($table, $data){
@@ -62,6 +68,16 @@ class BaseModel extends Database{
     public function delete($table, $id){
         $sql = "delete from ${table} where id = ${id}";
         $this->_query($sql);
+    }
+
+    public function fetchAll($res){
+        $data = [];
+
+        while($row = mysqli_fetch_assoc($res)){
+            array_push($data, $row);
+        }
+
+        return $data;
     }
 }
 ?>
