@@ -1,160 +1,11 @@
+<?php
 
+echo "<pre>";
+echo print_r($bigTag);
+echo print_r($tagInBigTag);
+echo "</pre>";
 
-
-
-
-    <!-- trending -->
-    <section class="home-search-trending">
-        <div class="container">
-            <div class="search-trending-block">
-                <!-- title -->
-                <div class="block-head">
-                    <div class="head-title">Xu hướng tìm kiếm</div>
-                </div>
-                <!-- trend -->
-                <div class="block-body">
-                    <div class=" px-3 py-2">
-                        <div class="row mb-3">
-                            <div class="col mx-2 p-1 item-col">
-                                <a href="" class="search-trending-item">
-                                    <div class="img-col">
-                                        <img  src="img/Hamilton.jpg" alt="">
-                                    </div>
-                                    <div class="info-col">
-                                        <div class="keyword-label">Đồng hồ Hamilton</div>
-                                        <div class="total-search">1K lượt tìm</div>
-                                    </div>
-                                    
-                                </a>
-                            </div>
-                            <div class="col mx-2 p-1 item-col">
-                                <a href="" class="search-trending-item">
-                                    <div class="img-col">
-                                        <img  src="img/canon.jpg" alt="">
-                                    </div>
-                                    <div class="info-col">
-                                         <div class="keyword-label">Máy ảnh Canon</div>
-                                        <div class="total-search">1K lượt tìm</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col mx-2 p-1 item-col">
-                                <a href="" class="search-trending-item">
-                                    <div class="img-col">
-                                        <img  src="img/decor.jpg" alt="">
-                                    </div>
-                                    <div class="info-col">
-                                        <div class="keyword-label">Trang trí nhà cửa</div>
-                                        <div class="total-search">1K lượt tìm</div>
-                                    </div>
-                                    
-                                </a>
-                            </div>
-                            <div class="col mx-2 p-1 item-col">
-                                <a href="" class="search-trending-item">
-                                    <div class="img-col">
-                                        <img  src="img/Apple.jpg" alt="">
-                                    </div>
-                                    <div class="info-col">
-                                         <div class="keyword-label">Đồng hồ Apple 4</div>
-                                        <div class="total-search">1K lượt tìm</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col mx-2 p-1 item-col">
-                                <a href="" class="search-trending-item">
-                                    <div class="img-col">
-                                        <img  src="img/Airpods.jpg" alt="">
-                                    </div>
-                                    <div class="info-col">
-                                        <div class="keyword-label">Airpods</div>
-                                        <div class="total-search">1K lượt tìm</div>
-                                    </div>
-                                </a>
-                            </div>
-                            
-                        </div>
-                        <div class="row ">
-                            <div class="col mx-2 p-1 item-col">
-                                <a href="" class="search-trending-item">
-                                    <div class="img-col">
-                                        <img  src="img/Dien_tu.jpg" alt="">
-                                    </div>
-                                    <div class="info-col">
-                                         <div class="keyword-label">Đồ điện tử</div>
-                                        <div class="total-search">1K lượt tìm</div>
-                                    </div>
-                                   
-                                </a>
-                            </div>
-
-                            <div class="col mx-2 p-1 item-col">
-                                <a href="" class="search-trending-item">
-                                    <div class="img-col">
-                                        <img  src="img/coffee.jpg" alt="">
-                                    </div>
-                                    <div class="info-col">
-                                        <div class="keyword-label">Máy pha cà phê</div>
-                                        <div class="total-search">1K lượt tìm</div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col mx-2 p-1 item-col">
-                                <a href="" class="search-trending-item">
-                                    <div class="img-col">
-                                        <img  src="img/smart.jpg" alt="">
-                                    </div>
-                                    <div class="info-col">
-                                        <div class="keyword-label">Thiết bị thông minh</div>
-                                        <div class="total-search">1K lượt tìm</div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col mx-2 p-1 item-col">
-                                <a href="" class="search-trending-item">
-                                    <div class="img-col">
-                                        <img  src="img/smart-house.jpg" alt="">
-                                    </div>
-                                    <div class="info-col">
-                                        <div class="keyword-label">Nhà thông minh</div>
-                                        <div class="total-search">1K lượt tìm</div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col mx-2 p-1 item-col">
-                                <a href="" class="search-trending-item">
-                                    <div class="img-col">
-                                        <img  src="img/laptop.jpg" alt="">
-                                    </div>
-                                    <div class="info-col">
-                                        <div class="keyword-label">Laptop</div>
-                                        <div class="total-search">1K lượt tìm</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- home middle -->
-    <section class="home-middle">
-        <div class="container d-flex ">
-            <a href="" class="bner-item mx-2 ">
-                <img src="img/bner_1.jpg" class="bner-item-img" alt="">
-            </a>
-            <a href="" class="bner-item mx-2 ">
-                <img src="img/bner_2.jpg" class="bner-item-img" alt="">
-            </a>
-        </div>
-    </section>
-
+?>
 <!-- home suggest -->
 <section class="home-suggest-section mt-5">
     <div class="section-head">
@@ -200,7 +51,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense.jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense.jpg" alt="">
                                         </div>
                                         <div class="product-tag">
                                             <span class="deal-discount">
@@ -229,7 +80,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense (7).jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense (7).jpg" alt="">
                                         </div>
                                         <div class="product-tag">
                                             <span class="deal-discount">
@@ -259,7 +110,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense (2).jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense (2).jpg" alt="">
                                         </div>
                                         <div class="product-tag">
                                             <span class="deal-discount">
@@ -289,7 +140,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense (1).jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense (1).jpg" alt="">
                                         </div>
                                         <div class="product-tag">
                                             <span class="deal-discount">
@@ -319,7 +170,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense (3).jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense (3).jpg" alt="">
                                         </div>
                                        
                                     </a>
@@ -351,7 +202,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense (4).jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense (4).jpg" alt="">
                                         </div>
                                         
                                     </a>
@@ -375,7 +226,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense (5).jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense (5).jpg" alt="">
                                         </div>
                                        
                                     </a>
@@ -399,7 +250,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense (6).jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense (6).jpg" alt="">
                                         </div>
                                         
                                     </a>
@@ -423,7 +274,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense (8).jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense (8).jpg" alt="">
                                         </div>
                                         
                                     </a>
@@ -447,7 +298,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense (9).jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense (9).jpg" alt="">
                                         </div>
                                         <div class="product-tag">
                                             <span class="deal-discount">
@@ -512,7 +363,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense (10).jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense (10).jpg" alt="">
                                         </div>
                                         <div class="product-tag">
                                             <span class="deal-discount">
@@ -541,7 +392,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense (11).jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense (11).jpg" alt="">
                                         </div>
                                         <div class="product-tag">
                                             <span class="deal-discount">
@@ -571,7 +422,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense (12).jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense (12).jpg" alt="">
                                         </div>
                                         
                                     </a>
@@ -595,7 +446,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense (13).jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense (13).jpg" alt="">
                                         </div>
                                         <div class="product-tag">
                                             <span class="deal-discount">
@@ -625,7 +476,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/fado_ssense (14).jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/fado_ssense (14).jpg" alt="">
                                         </div>
                                         <div class="product-tag">
                                             <span class="deal-discount">
@@ -693,7 +544,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/8161tUdEWpL._SR200,200_.jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/8161tUdEWpL._SR200,200_.jpg" alt="">
                                         </div>
                                         
                                     </a>
@@ -718,7 +569,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/71S6oT4GPsL._SR200,200_.jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/71S6oT4GPsL._SR200,200_.jpg" alt="">
                                         </div>
                                         
                                     </a>
@@ -743,7 +594,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/71uZyQ-JyHL._SR200,200_.jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/71uZyQ-JyHL._SR200,200_.jpg" alt="">
                                         </div>
                                         
                                     </a>
@@ -768,7 +619,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/71Xjz9OQxPL._SR200,200_.jpg" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/71Xjz9OQxPL._SR200,200_.jpg" alt="">
                                         </div>
                                     </a>
                                 </div>
@@ -792,7 +643,7 @@
                                 <div class="product-deal-head">
                                     <a href="" class="product-card">
                                         <div class="product-img">
-                                            <img class="img-fluid style-suggest-img" src="img/suggest/91btQgPuWIL._SR200,200_.jpg.crdownload" alt="">
+                                            <img class="img-fluid style-suggest-img" src="assets/img/suggest/91btQgPuWIL._SR200,200_.jpg.crdownload" alt="">
                                         </div>
                                     </a>
                                 </div>
@@ -822,6 +673,3 @@
         </div>
     </div>
 </section>
-
-
-

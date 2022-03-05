@@ -32,14 +32,14 @@ class BaseModel extends Database{
         return $data;
     }
 
-    public function find($table, $data){
+    public function find($table, $data, $limit = 100){
         $modify_data = [];
 
         foreach ($data as $key => $val){
-            array_push($modify_data, "${key} = '" . $val . "'");
+            array_push($modify_data, "${key}='" . $val . "'");
         }
 
-        $sql = "select * from ${table} where " . implode(" and ", $modify_data);
+        $sql = "select * from ${table} where " . implode(" and ", $modify_data) .  " limit " . $limit;
         $res = $this->_query($sql);
         return $this->fetchAll($res);
     }

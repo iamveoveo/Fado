@@ -53,18 +53,24 @@
                                                     <div class="product-img">
                                                         <img class="img-fluid" src="assets/img/upload/<?php echo $row['ProdImg']; ?>" alt="">
                                                     </div>
-                                                    <div class="product-tag">
-                                                        <span class="deal-discount">
-                                                            <font style="vertical-align: inherit;">-<?php echo $row['Discount'];?>%</font>
-                                                        </span>
-                                                    </div>
+                                                    <?php if($row['Discount'] != ''): ?>
+                                                        <div class="product-tag">
+                                                            <span class="deal-discount">
+                                                                <font style="vertical-align: inherit;">-<?php echo $row['Discount'];?>%</font>
+                                                            </span>
+                                                        </div>
+                                                    <?php endif; ?>
                                                 </a>
                                             </div>
                                             <div class="product-deal-body">
                                                 <div class="price-group">
                                                     <!-- price -->
-                                                    <span class="current-price"><?php echo $row['ProdPrice'] - (($row['ProdPrice'] * $row['Discount']) / 100); ?><sup>đ</sup></span>
-                                                    <span class="old-price"><?php echo $row['ProdPrice']?><sup>đ</sup></span>
+                                                    <?php if($row['Discount'] != ''):?>
+                                                        <span class="current-price"><?php echo number_format($row['ProdPrice'] - (($row['ProdPrice'] * $row['Discount']) / 100)); ?><sup>đ</sup></span>
+                                                        <span class="old-price"><?php echo $row['ProdPrice'];?><sup>đ</sup></span>
+                                                    <?php else:?>
+                                                        <span class="current-price"><?php echo $row['ProdPrice'];?><sup>đ</sup></span>
+                                                    <?php  endif;?>
                                                 </div>
                                                 <div class="card-title">
                                                     <a href="" class="title-inner">
