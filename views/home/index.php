@@ -10,7 +10,8 @@ view('home.trending', [
 ]);
 view('Home.suggest',[
     "bigTag"        =>$bigTag,
-    "tagInBigTag"   => $tagInBigTag
+    "tagInBigTag"   => $tagInBigTag,
+    "prodOfChildTag"=> $prodOfChildTag
 ]);
 view('layout.footer');
 ?>

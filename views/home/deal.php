@@ -67,9 +67,9 @@
                                                     <!-- price -->
                                                     <?php if($row['Discount'] != ''):?>
                                                         <span class="current-price"><?php echo number_format($row['ProdPrice'] - (($row['ProdPrice'] * $row['Discount']) / 100)); ?><sup>đ</sup></span>
-                                                        <span class="old-price"><?php echo $row['ProdPrice'];?><sup>đ</sup></span>
+                                                        <span class="old-price"><?php echo number_format($row['ProdPrice']);?><sup>đ</sup></span>
                                                     <?php else:?>
-                                                        <span class="current-price"><?php echo $row['ProdPrice'];?><sup>đ</sup></span>
+                                                        <span class="current-price"><?php echo number_format($row['ProdPrice']);?><sup>đ</sup></span>
                                                     <?php  endif;?>
                                                 </div>
                                                 <div class="card-title">

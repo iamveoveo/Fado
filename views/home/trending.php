@@ -48,9 +48,9 @@
                                                 <!-- price -->
                                                 <?php if($row['Discount'] != 0):?>
                                                     <span class="current-price"><?php echo number_format($row['ProdPrice'] - (($row['ProdPrice'] * $row['Discount']) / 100)); ?><sup>đ</sup></span>
-                                                    <span class="old-price"><?php echo $row['ProdPrice'];?><sup>đ</sup></span>
+                                                    <span class="old-price"><?php echo number_format($row['ProdPrice']);?><sup>đ</sup></span>
                                                 <?php else:?>
-                                                    <span class="current-price"><?php echo $row['ProdPrice'];?><sup>đ</sup></span>
+                                                    <span class="current-price"><?php echo number_format($row['ProdPrice']);?><sup>đ</sup></span>
                                                 <?php  endif;?>
                                             </div>
                                             <div class="card-title">
@@ -157,9 +157,9 @@
                                                     <!-- price -->
                                                     <?php if($prodByTag[$i]['Discount'] != 0):?>
                                                         <span class="current-price"><?php echo number_format($prodByTag[$i]['ProdPrice'] - (($prodByTag[$i]['ProdPrice'] * $prodByTag[$i]['Discount']) / 100)); ?><sup>đ</sup></span>
-                                                        <span class="old-price"><?php echo $prodByTag[$i]['ProdPrice'];?><sup>đ</sup></span>
+                                                        <span class="old-price"><?php echo number_format($prodByTag[$i]['ProdPrice']);?><sup>đ</sup></span>
                                                     <?php else:?>
-                                                        <span class="current-price"><?php echo $prodByTag[$i]['ProdPrice'];?><sup>đ</sup></span>
+                                                        <span class="current-price"><?php echo number_format($prodByTag[$i]['ProdPrice']);?><sup>đ</sup></span>
                                                     <?php  endif;?>
                                                 </div>
         
