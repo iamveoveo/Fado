@@ -1,5 +1,5 @@
 <?php
-const SITEURL = 'http://localhost:8000/Fado/';
+const SITEURL = 'http://localhost/Fado/';
 
 class database {
 

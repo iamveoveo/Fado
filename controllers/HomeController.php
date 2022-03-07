@@ -6,9 +6,11 @@ class HomeController extends BaseController{
         $this->loadModel('ManufactureModel');
         $this->loadModel('ProductModel');
         $this->loadModel('TagModel');
+        $this->loadModel('UserModel');
         $this->ManufactureModel = new ManufactureModel;
-        $this->ProductModel = new ProductModel;
-        $this->TagModel = new TagModel;
+        $this->ProductModel     = new ProductModel;
+        $this->TagModel         = new TagModel;
+        $this->UserModel        = new UserModel;
     }
 
     public function index(){
@@ -38,6 +40,26 @@ class HomeController extends BaseController{
             "prodOfChildTag"=> $prodOfChildTag,
         ]);
     }
+
+    public function login(){
+        $loginAcc = [];
+
+        if(isset($_POST['login'])){
+            $loginAcc   = $this->UserModel->getByOption($option = ['UserEmail' => $_POST['UserEmail']], $limit = 1);
+
+            if(!empty($loginAcc)){
+                if($loginAcc[0]['Password'] == $_POST['Password']){
+                    $loginAcc = "một";
+                }
+            }
+        }
+
+
+        return $this->view('home.login', $data = [
+            'loginAcc'=>$loginAcc
+        ]);
+    }
+
 }
 
 ?>

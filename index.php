@@ -5,7 +5,7 @@ require 'core/Database.php';
 require 'models/BaseModel.php';
 require 'controllers/BaseController.php';
 
-$controller = isset($_GET['c']) ? strtolower($_GET['controller']) : 'home';
+$controller = isset($_GET['controller']) ? strtolower($_GET['controller']) : 'home';
 
 $action = isset($_GET['action']) ? strtolower($_GET['action']) : 'index';
 
