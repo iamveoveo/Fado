@@ -3,11 +3,6 @@ view('layout.head');
 ?>
 
 <body class="auth-page">
-    <?php
-    echo "<pre>";
-    echo print_r($loginAcc);
-    echo "</pre>";
-    ?>
     <section class="auth-block">
         <div class="auth-block-container">
             <div class="auth-block-space"></div>
@@ -27,6 +22,10 @@ view('layout.head');
                         <button class="register-active nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Đăng ký</button>
                     </li>
                 </ul>
+
+                <?php
+                    view('layout.alert');
+                ?>
 
                 <!-- body -->
                 <div class="auth-block-form-body tab-content" id="myTabContent">
@@ -78,6 +77,40 @@ view('layout.head');
                                 <div class="form-group-control">
                                     <div class="mz-form-control-md">
                                         <input name="UserEmail" type="email" class="my-form-control" placeholder="Địa chỉ email của quý khách">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-group-lable fw-bold">Địa chỉ</div>
+                                <div class="form-group-control">
+                                    <div class="mz-form-control-md">
+                                        <input name="Address" type="text" class="my-form-control" placeholder="Địa chỉ của quý khách">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row d-flex">
+                                <div class="form-group col-md-6">
+                                    <div class="form-group-lable fw-bold">Giới tính</div>
+                                    <div class="form-group-control">
+                                        <div class="mz-form-control-md">
+                                            <select name="Gender" class="my-form-control" placeholder="--Giới tính--">
+                                                <option value=null disabled selected>- - Giới tính - -</option>
+                                                <option value="Nữ">Nữ</option>
+                                                <option value="Nam">Nam</option>
+                                                <option value="Khác">Khác</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <div class="form-group-lable fw-bold">Ngày sinh</div>
+                                    <div class="form-group-control">
+                                        <div class="mz-form-control-md">
+                                            <input name="Birth" type="date" class="my-form-control">
+                                        </div>
                                     </div>
                                 </div>
                             </div>

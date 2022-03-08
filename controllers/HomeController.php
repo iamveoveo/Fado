@@ -48,12 +48,43 @@ class HomeController extends BaseController{
             $loginAcc   = $this->UserModel->getByOption($option = ['UserEmail' => $_POST['UserEmail']], $limit = 1);
 
             if(!empty($loginAcc)){
-                if($loginAcc[0]['Password'] == $_POST['Password']){
-                    $loginAcc = "một";
+                if(password_verify($_POST['Password'], $loginAcc[0]['Password'])){
+                    $_SESSION['UserID'] = $loginAcc[0]['UserID'];
+                    $_SESSION['UserRole'] = $loginAcc[0]['UserRole'];
+                    header('location: ' . SITEURL);
+                }else{
+                    $_SESSION['alert'] = "<span class='text-danger'>Sai mật khẩu</span>";
                 }
+            }else{
+                $_SESSION['alert'] = "<span class='text-danger'>Email chưa được đăng ký</span>";
             }
         }
 
+        if(isset($_POST['register'])){
+            $_POST['Password'] = password_hash($_POST['Password2'], PASSWORD_DEFAULT);
+            
+            $data1 = [
+                'name'      => $_POST['name'],
+                'Address'   => $_POST['Address'],
+                'Gender'    => $_POST['Gender'],
+                'Birth'     => $_POST['Birth'],
+                'Tel'       => $_POST['Tel']
+            ];
+
+            $data2 = [
+                'UserEmail' => $_POST['UserEmail'],
+                'Password'  => $_POST['Password'],
+                'UserRole'  => 'Khách hàng'
+            ];
+
+            $suc = $this->UserModel->add($data1, $data2);
+
+            if($suc){
+                $_SESSION['alert'] = "<span class='text-success'>Đăng ký thành công hãy đăng nhập bằng tài khoản vừa đăng ký</span>";
+            }else{
+                $_SESSION['alert'] = "<span class='text-danger'>Đăng ký thất bại vui lòng thử lại</span>";
+            }
+        }
 
         return $this->view('home.login', $data = [
             'loginAcc'=>$loginAcc

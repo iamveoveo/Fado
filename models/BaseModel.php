@@ -51,7 +51,7 @@ class BaseModel extends Database{
         }, array_values($data)));
 
         $sql = "insert into ${table} (${cols}) values (${vals})";
-        $this->_query($sql);
+        return $this->_query($sql);
     }
 
     public function update($table, $id, $data){
