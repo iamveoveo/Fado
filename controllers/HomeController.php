@@ -49,8 +49,7 @@ class HomeController extends BaseController{
 
             if(!empty($loginAcc)){
                 if(password_verify($_POST['Password'], $loginAcc[0]['Password'])){
-                    $_SESSION['UserID'] = $loginAcc[0]['UserID'];
-                    $_SESSION['UserRole'] = $loginAcc[0]['UserRole'];
+                    $_SESSION['logged'] = $loginAcc[0];
                     header('location: ' . SITEURL);
                 }else{
                     $_SESSION['alert'] = "<span class='text-danger'>Sai mật khẩu</span>";
@@ -89,6 +88,20 @@ class HomeController extends BaseController{
         return $this->view('home.login', $data = [
             'loginAcc'=>$loginAcc
         ]);
+    }
+
+    public function detail(){
+        if(isset($_GET['id'])){
+            $getTagOfProd   = $this->TagModel->getTagOfProd($_GET['id']);
+            $prod           = $this->ProductModel->getByOption(['ProdID' => $_GET['id']], 1);
+
+            return $this->view('home.product-details', $data = [
+                'getTagOfProd'  => $getTagOfProd,
+                'prod'          => $prod
+            ]);
+        }else{
+            header('location:' . SITEURL);
+        }
     }
 
 }

@@ -2,6 +2,7 @@
 view('layout.head');
 view('layout.header');
 view('home.slide');
+view('home.feature');
 view('department.depart_list', ["manufacture" => $manufacture]);
 view('home.deal', ['prodByVou'  => $prodByVou]);
 view('home.trending', [

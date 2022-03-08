@@ -14,6 +14,12 @@ class TagModel extends BaseModel{
         return $this->fetchAll($res);
     }
 
+    public function getTagOfProd($ID){
+        $sql = "select * from " . self::TABLE . " as t, tags_products as t_p where t_p.ProdID='${ID}' and t.TagID=t_p.TagID";
+        $res = $this->_query($sql);
+        return $this->fetchAll($res);
+    }
+    
 }
 
 ?>

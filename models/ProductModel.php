@@ -9,6 +9,10 @@ class ProductModel extends BaseModel{
         return $this->getAll(self::TABLE);
     }
 
+    public function getByOption($option=[], $limit=100){
+        return $this->find(self::TABLE_DETAIL, $option, $limit);
+    }
+
     public function showByDiscount(){
         return $this->find(self::TABLE_DETAIL, ['Discount !' => '']);
     }

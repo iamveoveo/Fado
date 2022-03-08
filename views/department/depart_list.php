@@ -1,3 +1,124 @@
+        <!-- quicklink -->
+        <section class="home-quicklink-section">
+        <div class="container">
+            <div class="home-quicklink-block">
+                <div class="quicklink-item-wrap">
+                    <div class="quicklink-item-col">
+                        <a href="" class="quicklink-item">
+                            <div class="item-icon">
+                                <img class="item-icon-img" src="https://cdn-beup.fadoglobal.io/uploads/instead-template-banner/2021/10/02/Fado.VN_1633167260.2296.svg" alt="">
+
+                            </div>
+                            <div class="item-title-box">
+                                <span class="item-title">Thời trang</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quicklink-item-col">
+                        <a href="" class="quicklink-item">
+                            <div class="item-icon">
+                                <img class="item-icon-img" src="https://cdn-beup.fadoglobal.io/uploads/instead-template-banner/2021/10/02/Fado.VN_1633167310.7448.svg" alt="">
+
+                            </div>
+                            <div class="item-title-box">
+                                <span class="item-title">Túi xách</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quicklink-item-col">
+                        <a href="" class="quicklink-item">
+                            <div class="item-icon">
+                                <img class="item-icon-img" src="https://cdn-beup.fadoglobal.io/uploads/instead-template-banner/2021/10/04/Fado.VN_1633341258.5236.svg" alt="">
+
+                            </div>
+                            <div class="item-title-box">
+                                <span class="item-title">Đồng hồ</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quicklink-item-col">
+                        <a href="" class="quicklink-item">
+                            <div class="item-icon">
+                                <img class="item-icon-img" src="https://cdn-beup.fadoglobal.io/uploads/instead-template-banner/2021/10/02/Fado.VN_1633167219.7576.svg" alt="">
+
+                            </div>
+                            <div class="item-title-box">
+                                <span class="item-title">Laptop</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quicklink-item-col">
+                        <a href="" class="quicklink-item">
+                            <div class="item-icon">
+                                <img class="item-icon-img" src="https://cdn-beup.fadoglobal.io/uploads/instead-template-banner/2021/10/02/Fado.VN_1633167299.2467.svg" alt="">
+
+                            </div>
+                            <div class="item-title-box">
+                                <span class="item-title">Thực phẩm, chức năng</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quicklink-item-col">
+                        <a href="" class="quicklink-item">
+                            <div class="item-icon">
+                                <img class="item-icon-img" src="https://cdn-beup.fadoglobal.io/uploads/instead-template-banner/2021/10/22/Fado.VN_1634892175.2875.svg" alt="">
+
+                            </div>
+                            <div class="item-title-box">
+                                <span class="item-title">Gia dụng</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quicklink-item-col">
+                        <a href="" class="quicklink-item">
+                            <div class="item-icon">
+                                <img class="item-icon-img" src="https://cdn-beup.fadoglobal.io/uploads/instead-template-banner/2021/10/22/Fado.VN_1634892175.2875.svg" alt="">
+
+                            </div>
+                            <div class="item-title-box">
+                                <span class="item-title">Sách</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quicklink-item-col">
+                        <a href="" class="quicklink-item">
+                            <div class="item-icon">
+                                <img class="item-icon-img" src="https://cdn-beup.fadoglobal.io/uploads/instead-template-banner/2021/10/04/Fado.VN_1633341274.7611.svg" alt="">
+
+                            </div>
+                            <div class="item-title-box">
+                                <span class="item-title">Mỹ phẩm</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quicklink-item-col">
+                        <a href="" class="quicklink-item">
+                            <div class="item-icon">
+                                <img class="item-icon-img" src="https://cdn-beup.fadoglobal.io/uploads/instead-template-banner/2021/10/02/Fado.VN_1633167288.2692.svg" alt="">
+
+                            </div>
+                            <div class="item-title-box">
+                                <span class="item-title">Nước hoa</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quicklink-item-col">
+                        <a href="" class="quicklink-item">
+                            <div class="item-icon">
+                                <img class="item-icon-img" src="https://cdn-beup.fadoglobal.io/uploads/instead-template-banner/2021/10/02/Fado.VN_1633167247.5933.svg" alt="">
+
+                            </div>
+                            <div class="item-title-box">
+                                <span class="item-title">Trang sức</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- department -->
     <section class="home-feature-department">
         <div class="container">
