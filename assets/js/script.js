@@ -17,5 +17,17 @@ function scroll(){
     else{
         document.getElementById("product-scroll-section").style.top = "-200px";
     }
-}
+};
 
+$(document).ready(function(){
+  var quantity = 1;
+
+  $('.down-btn').click(function(){
+    quantity--;
+    $('#quantity').val(quantity);
+  });
+  $('.up-btn').click(function(){
+    quantity++;
+    $('#quantity').val(quantity);
+  });
+});

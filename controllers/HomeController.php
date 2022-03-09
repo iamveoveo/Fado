@@ -7,10 +7,12 @@ class HomeController extends BaseController{
         $this->loadModel('ProductModel');
         $this->loadModel('TagModel');
         $this->loadModel('UserModel');
+        $this->loadModel('DeliveryModel');
         $this->ManufactureModel = new ManufactureModel;
         $this->ProductModel     = new ProductModel;
         $this->TagModel         = new TagModel;
         $this->UserModel        = new UserModel;
+        $this->DeliveryModel    = new DeliveryModel;
     }
 
     public function index(){
@@ -94,10 +96,12 @@ class HomeController extends BaseController{
         if(isset($_GET['id'])){
             $getTagOfProd   = $this->TagModel->getTagOfProd($_GET['id']);
             $prod           = $this->ProductModel->getByOption(['ProdID' => $_GET['id']], 1);
+            $deliOfProd     = $this->DeliveryModel->getByOption(['ProdID' => $_GET['id']]);
 
             return $this->view('home.product-details', $data = [
                 'getTagOfProd'  => $getTagOfProd,
-                'prod'          => $prod
+                'prod'          => $prod,
+                'deliOfProd'    => $deliOfProd
             ]);
         }else{
             header('location:' . SITEURL);

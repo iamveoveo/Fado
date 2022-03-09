@@ -467,7 +467,7 @@
     font-size: 14px !important;
 }
 .provider-segment-inner .segment-head{
-    border: 5px solid #171717;
+    border: 5px solid #171717 !important;
 }
 .pd-segment-head{
     padding: 10px;

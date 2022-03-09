@@ -51,7 +51,7 @@ view('layout.head');
                     <div class="cart-segment d-flex mt-4">
                         <div class="quantity-control-group">
                             <div class="down-btn down-btn-head " disabled>-</div>
-                            <input type="text" class="quantity-input mx-1 text-light" value="1" readonly>
+                            <input name="quantity" type="text" class="quantity-input mx-1 text-light" value="1" readonly>
                             <div class="up-btn down-btn-head">+</div>
                         </div>
                         <div class="btn btn-light cart-shared mx-3 cart-online">MUA NGAY</div>
@@ -324,7 +324,7 @@ view('layout.head');
                         <div class="cart-segment d-flex mt-3">
                             <div class="quantity-control-group">
                                 <div class="down-btn ">-</div>
-                                <input type="text" class="quantity-input mx-1" value="1" readonly>
+                                <input type="text" id="quantity" class="quantity-input mx-1" value="1" readonly>
                                 <div class="up-btn">+</div>
                             </div>
                             <div class="btn btn-dark cart-shared mx-3 cart-online">MUA NGAY</div>
@@ -339,16 +339,25 @@ view('layout.head');
                             <div>Miễn phí Vận chuyển Siêu tốc cho Platinum và Super VIP.
                                 <a href="#"><b>Nâng cấp ngay</b></a>
                             </div>
-                            <div class="provider-segment-inner">
-                                <div class="segment-head">
-                                    <div class="pd-segment-head">
-                                        <b>Giao Tiêu chuẩn</b>
+                            <div class="provider-segment-inner row">
+                                <?php foreach ($deliOfProd as $row): 
+                                    $time = ' +'.$row['Time'].' day'; $time1 = ' +'.($row['Time'] + 5).' day';?>
+                                    <div class="col-6">
+                                        <div class="<?php echo $row['DeliID']==1 ? "segment-head" : ""?> deli" style="border: 5px solid #cecece;">
+                                            <div class="pd-segment-head">
+                                                <b><?php echo $row['DeliName']; ?></b>
+                                            </div>
+                                        </div>
+                                        <div class="current-provider-info text-center">
+                                            Cước phí 
+                                            <b class="mx-1"><?php echo number_format($row['Cost']);?><sup>đ</sup></b>
+                                            <br>
+                                            Dự kiến về Việt Nam
+                                            <br>
+                                            <b class="mx-1"><?php echo (date('Y-m-d', strtotime($time)) . " - " . date('Y-m-d', strtotime($time1))); ?></b>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="current-provider-info text-center">
-                                    Dự kiến về Việt Nam
-                                    <b class="mx-1">11-03-2022 - 16-03-2022</b>
-                                </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     
@@ -532,3 +541,10 @@ view('layout.head');
 <?php
     view('layout.footer');
 ?>
+<script>
+
+    $('.deli').click(function(){
+        $('.deli').removeClass("segment-head");
+        $(this).addClass('segment-head');
+    });
+</script>
