@@ -11,7 +11,7 @@ class BaseModel extends Database{
         return mysqli_query($this->connect, $sql);
     }
 
-    public function getAll($table, $select = ['*'], $order=[], $limit = 100){
+    public function getAll($table, $select = ['*'], $order=[], $limit = '18446744073709551615'){
         $columns = implode(',', $select);
 
         $orderStr = implode(' ', $order);
@@ -47,7 +47,7 @@ class BaseModel extends Database{
     public function insert($table, $data){
         $cols = implode(',', array_keys($data));
         $vals = implode(',', array_map(function($value){
-            return "'" . $value . "'";
+            return $value=='null' ? $value : "'" . $value . "'";
         }, array_values($data)));
 
         $sql = "insert into ${table} (${cols}) values (${vals})";
