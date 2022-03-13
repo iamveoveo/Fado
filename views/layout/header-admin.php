@@ -59,23 +59,23 @@
                             <!-- quản lý -->
                             <div class="sb-sidenav-menu-heading">Quản lý</div>
                             <!-- sản phẩm -->
-                            <a class="nav-link nav-hov collapsed" href="<?php echo SITEURL . '?controller=product&action=show'; ?>" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link nav-hov collapsed" href="<?php echo SITEURL . '?controller=product'; ?>" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Sản phẩm
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="<?php echo SITEURL . '?controller=product&action=show'; ?>">Sản phẩm</a>
-                                    <a class="nav-link" href="<?php echo SITEURL . '?controller=tag&action=show'; ?>">Loại hàng</a>
-                                    <a class="nav-link" href="<?php echo SITEURL . '?controller=voucher&action=show'; ?>">Mã giảm giá</a>
+                                    <a class="nav-link" href="<?php echo SITEURL . '?controller=product'; ?>">Sản phẩm</a>
+                                    <a class="nav-link" href="<?php echo SITEURL . '?controller=tag'; ?>">Loại hàng</a>
+                                    <a class="nav-link" href="<?php echo SITEURL . '?controller=voucher'; ?>">Mã giảm giá</a>
                                 </nav>
                             </div>
-                            <a class="nav-link nav-hov" href="<?php echo SITEURL . '?controller=manufacture&action=show'; ?>" >
+                            <a class="nav-link nav-hov" href="<?php echo SITEURL . '?controller=manufacture'; ?>" >
                                 <div class="sb-nav-link-icon"><i class="bi bi-kanban-fill"></i></div>
                                 Nhà sản xuất
                             </a>
-                            <a class="nav-link nav-hov" href="<?php echo SITEURL . '?controller=users&action=show'; ?>" >
+                            <a class="nav-link nav-hov" href="<?php echo SITEURL . '?controller=users'; ?>" >
                                 <div class="sb-nav-link-icon"><i class="bi bi-people-fill"></i></div>
                                 Người dùng
                             </a>
@@ -89,14 +89,14 @@
                             
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="<?php echo SITEURL . '?controller=order&action=show'; ?>" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                    <a class="nav-link collapsed" href="<?php echo SITEURL . '?controller=order'; ?>" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                                         Đơn hàng
                                     </a>
-                                    <a class="nav-link collapsed" href="<?php echo SITEURL . '?controller=payment&action=show'; ?>" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                    <a class="nav-link collapsed" href="<?php echo SITEURL . '?controller=payment'; ?>" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                                         Hình thức thanh toán
                                     </a>
                                     
-                                    <a class="nav-link collapsed" href="<?php echo SITEURL . '?controller=delivery&action=show'; ?>" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                    <a class="nav-link collapsed" href="<?php echo SITEURL . '?controller=delivery'; ?>" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
                                         Đơn vị vận chuyển
                                     </a>
                                     

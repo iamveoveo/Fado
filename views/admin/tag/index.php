@@ -37,15 +37,17 @@ view('layout.header-admin');
                                     <td><?php echo $row['BigTagName']; ?></td>
                                     <td><?php echo $row['TagTrending']==1 ? '<i class="fa-solid fa-square-check text-success"></i>' : '<i class="fa-solid fa-square-xmark"></i>'; ?></td>
                                     <td>
-                                        <button href="<?php echo SITEURL?>" type="button" class="btn btn-outline-success btn-sm "style="margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#edit">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </button>
+                                        <a href="<?php echo SITEURL . '?controller=tag&action=modify&id=' . $row['TagID'] ?>" >
+                                            <button type="button" class="btn btn-outline-success btn-sm "style="margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#edit">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+                                        </a>
                                     </td>
                                     <td>
-                                    <button type="button" class="btn btn-outline-dark btn-sm" style="margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#detele">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </button>
-                                    </td>
+                                        <button name="delete-btn" id="<?php echo SITEURL . '?controller=tag&action=remove&id=' . $row['TagID'] ?>" type="button" class="btn btn-outline-dark btn-sm" style="margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#detele">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </td>    
                                 </tr>
                             <?php endforeach; ?>
                             
@@ -92,7 +94,12 @@ view('layout.header-admin');
                                     </div>
                                     <div class="input-group flex-nowrap mb-2 ">
                                         <span class="input-group-text col-md-3" id="addon-wrapping">Xu hướng</span>
-                                        <input name="TagTrending" class="form-check-input mt-0" style="height: 38px;width: 38px;margin: auto;border: solid 1px #000000;" type="checkbox" value="1" aria-label="Checkbox for following text input">
+                                        
+                                        <input name="TagTrending" class="form-radio-input mt-0" style="height: 38px;width: 38px;margin: auto;" type="radio" value="1" aria-label="radio for following text input">
+                                        <span class="input-group-text" id="addon-wrapping">có</span>
+                                        
+                                        <input checked name="TagTrending" class="form-radio-input mt-0" style="height: 38px;width: 38px;margin: auto;" type="radio" value="0" aria-label="radio for following text input">
+                                        <span class="input-group-text" id="addon-wrapping">không</span>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
@@ -113,9 +120,10 @@ view('layout.header-admin');
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body" style="margin:auto;">
-                                <button type="button" class="btn btn-primary mx-3  ">Xóa</button>                                       
+                                <a href="#" id="delete">
+                                    <button type="button" class="btn btn-primary mx-3  ">Xóa</button>                                       
+                                </a>
                                 <button type="button" class="btn btn-secondary mx-3" data-bs-dismiss="modal">Hủy</button>
-
                             </div>
                         </div>
                     </div>

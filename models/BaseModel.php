@@ -61,13 +61,13 @@ class BaseModel extends Database{
             array_push($modify_data, "${key} = '" . $val . "'");
         }
 
-        $sql = "update ${table} set " . implode(",", $modify_data) . " where id = ${id}";
-        $this->_query($sql);
+        $sql = "update ${table} set " . implode(",", $modify_data) . " where ${id}";
+        return $this->_query($sql);
     }
 
     public function delete($table, $id){
-        $sql = "delete from ${table} where id = ${id}";
-        $this->_query($sql);
+        $sql = "delete from ${table} where ${id}";
+        return $this->_query($sql);
     }
 
     public function fetchAll($res){

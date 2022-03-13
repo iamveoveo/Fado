@@ -23,11 +23,13 @@ $(document).ready(function(){
   var quantity = 1;
 
   $('.down-btn').click(function(){
-    quantity--;
-    $('#quantity').val(quantity);
+    if(quantity>1){
+      quantity--;
+      $('[name="quantity"]').val(quantity);
+    };
   });
   $('.up-btn').click(function(){
     quantity++;
-    $('#quantity').val(quantity);
+    $('[name="quantity"]').val(quantity);
   });
 });

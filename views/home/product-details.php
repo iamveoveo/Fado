@@ -324,7 +324,7 @@ view('layout.head');
                         <div class="cart-segment d-flex mt-3">
                             <div class="quantity-control-group">
                                 <div class="down-btn ">-</div>
-                                <input type="text" id="quantity" class="quantity-input mx-1" value="1" readonly>
+                                <input type="text" name="quantity" class="quantity-input mx-1" value="1" readonly>
                                 <div class="up-btn">+</div>
                             </div>
                             <div class="btn btn-dark cart-shared mx-3 cart-online">MUA NGAY</div>

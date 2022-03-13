@@ -7,6 +7,14 @@
 // Scripts
 // 
 
+$(document).ready(function(){
+
+    $('[name="delete-btn"]').click(function(){
+        $('#delete').attr('href', $(this).attr('id'));
+    })
+
+});
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Toggle the side navigation
@@ -24,3 +32,4 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+

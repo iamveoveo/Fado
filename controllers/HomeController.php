@@ -20,7 +20,7 @@ class HomeController extends BaseController{
         $prodByVou      = $this->ProductModel->showByDiscount(10);
         $tagTrend       = $this->TagModel->getByOption(['TagTrending' => 1]);
         $prodByTag      = $this->ProductModel->getByTag($tagTrend[0]['TagID']);
-        $bigTag         = $this->TagModel->getBigTag(5);
+        $bigTag         = $this->TagModel->getBigTag('5');
         $tagInBigTag    = [];
         $prodOfChildTag = [];
 
@@ -28,8 +28,10 @@ class HomeController extends BaseController{
             $tagInBigTag[$row['TagID']] = $this->TagModel->getByOption(['BigTag' => $row['TagID']], 5);
         };
 
-        foreach ($tagInBigTag as $row){
-            $prodOfChildTag[$row[0]['TagID']] = $this->ProductModel->getByTag($row[0]['TagID']);
+        foreach ($tagInBigTag as $rows){
+            foreach ($rows as $row){
+                $prodOfChildTag[$row['TagID']] = $this->ProductModel->getByTag($row['TagID']);
+            }
         }
     
         return $this->view('home.index', $data = [
