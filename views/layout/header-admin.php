@@ -69,12 +69,9 @@
                                     <a class="nav-link" href="<?php echo SITEURL . '?controller=product'; ?>">Sản phẩm</a>
                                     <a class="nav-link" href="<?php echo SITEURL . '?controller=tag'; ?>">Loại hàng</a>
                                     <a class="nav-link" href="<?php echo SITEURL . '?controller=voucher'; ?>">Mã giảm giá</a>
+                                    <a class="nav-link" href="<?php echo SITEURL . '?controller=manufacture'; ?>">Nhà sản xuất</a>
                                 </nav>
                             </div>
-                            <a class="nav-link nav-hov" href="<?php echo SITEURL . '?controller=manufacture'; ?>" >
-                                <div class="sb-nav-link-icon"><i class="bi bi-kanban-fill"></i></div>
-                                Nhà sản xuất
-                            </a>
                             <a class="nav-link nav-hov" href="<?php echo SITEURL . '?controller=users'; ?>" >
                                 <div class="sb-nav-link-icon"><i class="bi bi-people-fill"></i></div>
                                 Người dùng
