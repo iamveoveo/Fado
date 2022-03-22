@@ -63,7 +63,7 @@ $date   = new DateTime('now');
                     </table>
                     <!-- add acc -->
                     <div class="d-flex flex-row-reverse mt-2">
-                        <button type="button" class="btn btn-dark mb-4" data-bs-toggle="modal" data-bs-target="#add">Thêm loại hàng</button>
+                        <button type="button" class="btn btn-dark mb-4" data-bs-toggle="modal" data-bs-target="#add">Thêm mã giảm giá</button>
                     </div>
                     <!-- Button trigger modal -->
                 </div>
