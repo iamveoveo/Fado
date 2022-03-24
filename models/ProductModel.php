@@ -2,14 +2,18 @@
 
 class ProductModel extends BaseModel{
     
-    CONST TABLE = 'Product';
-    CONST TABLE_DETAIL = 'Product_Detail_';
+    CONST TABLE = 'product';
+    CONST TABLE_DETAIL = 'productdetail';
 
     public function show($select = ['*'], $order=[], $limit = '18446744073709551615'){
         return $this->getAll(self::TABLE);
     }
 
     public function getByOption($option=[], $limit=100){
+        return $this->find(self::TABLE, $option, $limit);
+    }
+
+    public function getDetailByOption($option=[], $limit=100){
         return $this->find(self::TABLE_DETAIL, $option, $limit);
     }
 
@@ -31,6 +35,36 @@ class ProductModel extends BaseModel{
         $res = $this->_query($sql);
         return $this->fetchAll($res);
     }
+
+    public function add($data){
+        if ($this->insert(self::TABLE, $data)){
+            $this->insert(self::TABLE_DETAIL, ['ProdID' => $data['ProdID']]);
+            return true;
+        }
+        return false;
+    }
+
+    public function remove($id){
+        $id     = "ProdID = '" . $id . "'";
+        $detail = $this->delete(self::TABLE_DETAIL, $id);
+        $tag    = $this->delete('tags_products', $id);
+        $vou    = $this->delete('voucher', $id);
+        if ($detail && $tag && $vou){
+            return $this->delete(self::TABLE, $id);
+        }
+        return false;
+    }
+
+    public function modify($id, $data = []){
+        $id = "ProdID = '" . $id . "'";
+        return $this->update(self::TABLE, $id, $data);
+    }
+
+    public function modify_detail($id, $data = []){
+        $id = "ProdID = '" . $id . "'";
+        return $this->update(self::TABLE_DETAIL, $id, $data);
+    }
+
 }
 
 ?>

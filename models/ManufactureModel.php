@@ -21,6 +21,11 @@ class ManufactureModel extends BaseModel{
         return $this->update(self::TABLE, $id, $data);
     }
 
+    public function remove($id){
+        $id = "ManuID = '" . $id . "'";
+        return $this->delete(self::TABLE, $id);
+    }
+
 }
 
 ?>

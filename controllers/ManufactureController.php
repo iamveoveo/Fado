@@ -78,10 +78,24 @@ class ManufactureController extends BaseController{
 
             return $this->view('admin.manufacture.update', $data    = [
                 'manu'       => $manu
-            ]);
+            ]); 
         }else{
             header('location: ' . SITEURL . '?controller=manufacture');
         }        
+    }
+
+    public function remove(){
+        if(isset($_GET['id'])){
+            $completed  = $this->ManufactureModel->remove($_GET['id']);
+            
+            if ($completed):    $_SESSION['alert'] = "<span class='text-success'>Xóa bản ghi thành công</span>";
+            else:               $_SESSION['alert'] = "<span class='text-danger'>Xóa bản ghi không thành công</span>";
+            endif;
+
+            header('location: ' . SITEURL . '?controller=manufacture');
+        }else{
+            header('location: ' . SITEURL . '?controller=manufacture');
+        }
     }
 
 }
